@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday My Love ❤️</title>
+  <!-- Google font (online) - if you're offline the fallback will be used -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- Basic reset ---------- */
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin: 0; }
+
+    /* ---------- Body + background ---------- */
+    body {
+      font-family: 'Baloo 2', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: #ffeef4; /* soft pink fallback */
+      background-image: url('hearts-background-4.jpg'); /* <-- Put your saved image here (hearts.png) */
+      background-repeat: repeat;       /* tile the pattern */
+      background-size: 350px;          /* adjust to scale hearts */
+      color: #333;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ---------- Page layout ---------- */
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* ---------- Center card / title ---------- */
+    .title-card {
+      background: rgba(255,255,255,0.95);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 900px;
+      width: calc(100% - 40px);
+    }
+
+    .title {
+      font-size: clamp(28px, 6vw, 64px); /* responsive size */
+      margin: 0 0 10px 0;
+      color: #ff5f97;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: #7a4a60;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* ---------- Section containers for scroll content ---------- */
+    .section {
+      width: 100%;
+      max-width: 800px;
+      margin: 36px auto;
+      text-align: center;
+    }
+
+    .card-small {
+      background: rgba(255,255,255,0.95);
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-block;
+      background: linear-gradient(180deg,#ff80b0,#ff5f97);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(255,95,151,0.18);
+      transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255,95,151,0.18); }
+
+    /* ---------- Hidden content styles ---------- */
+    .hidden {
+      display: none;
+      margin-top: 18px;
+      text-align: left;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* small responsive tweaks */
+    @media (max-width:520px){
+      .title-card{ padding: 28px 18px; }
+      .btn{ width: 100%; }
+      .hidden{ font-size: 15px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- CENTER TITLE -->
+    <div class="title-card">
+      <h1 class="title">HAPPY BIRTHDAY<br> 
+        MITANSHI!!!!! 🎉</h1>
+      <p class="subtitle">I hope you have the happiest birthday ever, you don't turn 20 everyday. I wish I could have been there, to give you a birthday hug and a kiss but oh well, but don't worry I am sending you lots of kisses telepathecally, I love you soo much.</p>
+    </div>
+
+    <!-- POEM BUTTON SECTION -->
+    <div class="section">
+      <div class="card-small">
+        <h3 style="margin-top:0">I wrote something for you😚</h3>
+        <p>Click on this.</p>
+        <button class="btn" id="poemBtn">Open</button>
+
+        <!-- POEM PLACEHOLDER (hidden until button clicked) -->
+        <div id="poem" class="hidden">
+          <p><!-- PLACEHOLDER: replace this with your poem text -->
+          Hadn’t really done this before<br>
+never thought I'd write poems for a girl<br>
+still, you made me want to write my heart out<br>
+my love, you send me to the ninth cloud.<br>
+<br>
+I see you now when I close my eyes<br>
+that pretty face, the curve of your smile<br>
+how I always sigh when I realize<br>
+you’re the pretty girl I get to call mine.<br>
+<br>
+Nights I look forward to,<br>
+in anticipation of dreams of you<br>
+your sight blesses me, dear, even in my sleep<br>
+I don’t want to wake up early, it’s the only thing I fear.<br>
+<br>
+My love, I hope you know<br>
+you’ve changed my life, and even me so<br>
+I will cherish you forever<br>
+for you’re my sun amidst the snow.<br>
+<br>
+I love you, I always will <3
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLAYLIST BUTTON SECTION -->
+    <div class="section">
+      <div class="card-small">
+        <h3 style="margin-top:0">songs I think were written about us 🥰</h3>
+        <p>Now click on this</p>
+        <button class="btn" id="playlistBtn">Open</button>
+
+        <!-- PLAYLIST PLACEHOLDER (hidden until button clicked) -->
+        <div id="playlist" class="hidden">
+          <p> <a id="playlistLink" href="#" target="_blank">(your playlist link will appear here)</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- small footer -->
+    <div style="margin:30px 0; color:#6b4858; opacity:0.9; font-size:14px; text-align:center;">
+      I love you babe ❤️
+    </div>
+  </div>
+
+  <script>
+    // ---------- Helper: toggle visibility with smoothness ----------
+    function toggleShow(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      if(el.style.display === 'block'){
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+      }
+    }
+
+    // Poem button: shows the poem placeholder
+    document.getElementById('poemBtn').addEventListener('click', function(){
+      toggleShow('poem');
+      // optional: scroll poem into view smoothly
+      setTimeout(()=>{
+        document.getElementById('poem').scrollIntoView({behavior:'smooth', block:'center'});
+      },120);
+    });
+
+    // Playlist button: reveals a link. Replace the href below when you have the playlist URL.
+    document.getElementById('playlistBtn').addEventListener('click', function(){
+      const link = document.getElementById('playlistLink');
+      // put your playlist url here (example: a Spotify/YouTube link)
+      const playlistUrl = 'https://music.youtube.com/playlist?list=PLipSAAPsDMNARce3-r66qG0kuoxZDUDSa&si=Uqfxeve4HMdMrKow'; // <-- replace this with your actual playlist URL
+      link.href = playlistUrl;
+      link.textContent = playlistUrl;
+      toggleShow('playlist');
+      setTimeout(()=>{ document.getElementById('playlist').scrollIntoView({behavior:'smooth', block:'center'}); },120);
+    });
+  </script>
+</body>
+</html>
